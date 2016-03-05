@@ -1,0 +1,53 @@
+<ui-view>
+<h3>Tracks List</h3>
+<br>
+
+<div>
+    <div class="input-group">
+      <input type="text" class="form-control btn-lg" ng-model="tracks.title" placeholder="Search Title ...">
+	  <span class="input-group-btn">
+        <button class="btn btn-default glyphicon glyphicon-search" type="button"></button>
+      </span>
+    </div>
+</div>
+
+<br>
+<br>
+<!-- <div ng-repeat = "track in tracks.tracks">
+{{track}}
+<br>
+<br>
+ {{tracks.tracks.length}} 
+</div> -->
+
+<div class="panel panel-info">
+  <div class="panel-heading text-center">TRACKS</div>
+
+  <table class="table table table-striped">
+	
+	<thead>
+      <tr>
+        <th class="text-center">Track</th>
+        <th class="text-center">Artist</th>
+        <th class="text-center">Rating</th>
+      </tr>		
+	</thead>
+	<tbody ng-repeat = "track in tracks.tracks">
+	<tr>
+        <td>{{track.title}}</td>
+        <td>{{track.artist}}</td>
+        <td>{{track.rating}}</td>
+      </tr>
+	</tbody>
+	
+  </table>
+</div>
+
+
+<br>
+<br>
+<!-- <button ng-click = "hello()">TEST</button> -->
+<a ui-sref="tracks.newTrack" class="btn btn-danger btn-lg">
+  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Song
+</a>
+</ui-view>
