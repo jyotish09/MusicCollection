@@ -47,6 +47,8 @@
 				artist: vm.artist
 			});
 			
+			console.info("New Track "+vm.title+" Updated");
+			
 			$state.go('tracks');
 			
 		};

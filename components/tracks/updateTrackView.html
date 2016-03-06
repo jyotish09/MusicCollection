@@ -1,16 +1,17 @@
-<div class="bs-callout bs-callout-primary">
+<div class="bs-callout bs-callout-primary" ng-repeat = "track in updateTrack.trackDetail">
 <h3 class="text-success">Edit Track Details</h3>
 <br>
+<!-- {{track}} -->
 <br>
 <form class="form-inline">
   <div class="form-group">
     <label>Title&nbsp; </label>
-    <input type="text" class="form-control" ng-model="updateTrack.title" placeholder="Song Name" ng-init = "updateTrack.trackDetail.title">
+    <input type="text" class="form-control" ng-model="updateTrack.titleNew" placeholder="Song Name" ng-init="updateTrack.titleNew = track.title">
   </div>
   &nbsp;
   <div class="form-group">
     <label>Rating&nbsp; </label>
-	<select ng-model="updateTrack.rating" class="form-control"">
+	<select ng-model="updateTrack.ratingNew" class="form-control" ng-init="updateTrack.ratingNew = track.rating">
 	  <option selected="selected">0</option>
 	  <option>1</option>
 	  <option>2</option>
@@ -27,16 +28,16 @@
 <form class="form-inline">
   <div class="form-group">
     <label>Artist(s) : &nbsp; </label>
-    <input type="text" class="form-control" ng-model="updateTrack.artist" placeholder="Artist/Band">
+    <input type="text" class="form-control" ng-model="updateTrack.artistNew" placeholder="Artist/Band" ng-init="updateTrack.artistNew = track.artist">
   </div>
 </form>
 <br>
 <br>
 <label> Genres : &nbsp </label> 
-<input type="text" class="form-control" placeholder="(Seperate them by ,)" ng-model="updateTrack.genres">
+<input type="text" class="form-control" placeholder="(Seperate them by ,)" ng-model="updateTrack.genresNew" ng-init="updateTrack.genresNew = track.genres">
 <br>
 <br>
-<button class="btn btn-success" ng-click="updateTrack()">
+<button class="btn btn-success" ng-click="updateTrackDetsils(track.$id)">
 <span class="glyphicon glyphicon-upload" ></span> Update
 </button>
 </div>
