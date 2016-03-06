@@ -5,23 +5,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-<!-- 		<link rel="stylesheet" href="node_modules/angular-material/angular-material.css"> -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.6/angular-material.min.css">
     </head>
     <body  ng-app="musicPlayer">
         <div class="navbar navbar-inverse navbar-static-top">
             <div class="container">
-                <div class="navbar-brand ">Music Explorer</div>            
+                <div class="navbar-brand ">Music Explorer</div>   
+				
+				    <ul class="nav navbar-nav">
+					  <li><a ui-sref="tracks">Tracks</a></li>
+					  <li><a ui-sref="genres">Genre</a></li>
+					</ul>
+					
+					    <ul class="nav navbar-nav navbar-right">
+						  <li><a href="https://github.com/jyotish09/MusicCollection">Source Code</a></li>
+						  <li><a href="https://www.firebase.com/">Firebase DB ?</a></li>
+						</ul>
+				
             </div>
         </div>
         
         <div class="container">
-			<div class="jumbotron col-xs-2 ">
-				<a class="btn btn-info " ui-sref="tracks">Tracks</a>
-				&nbsp;
-				<a class="btn btn-warning " ui-sref="genres">Genre</a>
-			</div>
-            <div class="jumbotron col-xs-8 col-md-offset-1 text-center">
+            <div class="jumbotron col-xs-10 col-md-offset-1 text-center">
 				<ui-view>
 					<h2>Player!</h2>
 				</ui-view>

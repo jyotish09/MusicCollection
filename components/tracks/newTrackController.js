@@ -25,6 +25,7 @@
 			}
 			catch(e){
 				console.warn("Data Glitch, Refill and Try Again");
+				alert("Data Glitch, Refill and Try Again");
 				$state.go('tracks');
 				return;
 			}
@@ -35,7 +36,7 @@
 			console.log("Newly Added Song Artist : "+vm.artist);
 
 			
-			console.log("Genres "+genres.length+" : "+genres);
+			console.log("Genres ["+genres.length+"] : "+genres);
 			
 			 
 			vm.tracks.$add({
