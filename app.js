@@ -24,6 +24,12 @@
 				url:'/newTrack',
 				templateUrl:'components/tracks/newTrackView.html',
 				controller:'NewTrackController as newTrack'
+			})
+			
+			.state('tracks.updateTrack',{
+				url:'/updateTrack/:trackTitle',
+				templateUrl:'components/tracks/updateTrackView.html',
+				controller:'UpdateTrackController as updateTrack'
 			});
 		
 	});

@@ -31,7 +31,10 @@
 	<tbody ng-repeat = "track in tracks.tracks.slice(((tracks.currentPage-1)*5), ((tracks.currentPage)*5))"  ng-if="tracks.allTracks">  <!-- For Pagination -->
 	<tr> 
 <!--         <td>{{track.title}}&nbsp; : &nbsp;{{track.genres}}</td> -->
-        <td>{{track.title}} - {{track.artist}}</td>
+        <td>
+			{{track.title}} - {{track.artist}}
+			<a  ui-sref="tracks.updateTrack({trackTitle : track.title})"><span class = "glyphicon glyphicon-pencil"></span></a>			
+		</td>
         <td>{{track.genres}}</td>
         <td >
 			<span class="glyphicon glyphicon-star" ng-repeat="i in rating(track.rating)">&nbsp;</span>
@@ -47,7 +50,9 @@
 	<tbody ng-repeat = "track in tracks.searchTracksResult.slice(((tracks.currentPage-1)*5), ((tracks.currentPage)*5))"  ng-if="tracks.searchTracksBoolean">
 	<tr>
 <!--         <td>{{track.title}}&nbsp; : &nbsp;{{track.genres}}</td> -->
-        <td>{{track.title}} - {{track.artist}}</td>
+        <td>
+		{{track.title}} - {{track.artist}}
+		</td>
         <td>{{track.genres}}</td>
         <td >
 			<span class="glyphicon glyphicon-star" ng-repeat="i in rating(track.rating)">&nbsp;</span>
@@ -57,7 +62,10 @@
 	</tbody>
 	
   </table>
-  	<pagination total-items="tracks.tracks.length" ng-model="tracks.currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages" items-per-page="5"></pagination>
+  <!-- Pagination for all tracks -->
+  <pagination total-items="tracks.tracks.length" ng-if="tracks.allTracks" ng-model="tracks.currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages" items-per-page="5"></pagination>
+  <!-- Pagination for searched tracks --> 
+  <pagination total-items="tracks.searchTracksResult.length" ng-if="tracks.searchTracksBoolean" ng-model="tracks.currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages" items-per-page="5"></pagination>
 </div>
 
 <br>

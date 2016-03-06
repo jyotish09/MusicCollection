@@ -15,6 +15,9 @@
 		vm.searchTracksBoolean = false;
 		vm.searchTracksResult = [];
 		vm.currentPage = 1;
+		
+		//For Searching Tracks with Title
+		
 		$scope.trackCheck = function(){
 			
 			console.log("Searching for "+vm.searchTitle);

@@ -1,0 +1,42 @@
+<div class="bs-callout bs-callout-primary">
+<h3 class="text-success">Edit Track Details</h3>
+<br>
+<br>
+<form class="form-inline">
+  <div class="form-group">
+    <label>Title&nbsp; </label>
+    <input type="text" class="form-control" ng-model="updateTrack.title" placeholder="Song Name" ng-init = "updateTrack.trackDetail.title">
+  </div>
+  &nbsp;
+  <div class="form-group">
+    <label>Rating&nbsp; </label>
+	<select ng-model="updateTrack.rating" class="form-control"">
+	  <option selected="selected">0</option>
+	  <option>1</option>
+	  <option>2</option>
+	  <option>3</option>
+	  <option>4</option>
+	  <option>5</option>
+	</select>
+  </div>
+  &nbsp;
+<br>
+<br>
+</form>
+
+<form class="form-inline">
+  <div class="form-group">
+    <label>Artist(s) : &nbsp; </label>
+    <input type="text" class="form-control" ng-model="updateTrack.artist" placeholder="Artist/Band">
+  </div>
+</form>
+<br>
+<br>
+<label> Genres : &nbsp </label> 
+<input type="text" class="form-control" placeholder="(Seperate them by ,)" ng-model="updateTrack.genres">
+<br>
+<br>
+<button class="btn btn-success" ng-click="updateTrack()">
+<span class="glyphicon glyphicon-upload" ></span> Update
+</button>
+</div>
