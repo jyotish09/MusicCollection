@@ -14,7 +14,7 @@
 		vm.allTracks = true;	
 		vm.searchTracksBoolean = false;
 		vm.searchTracksResult = [];
-		
+		vm.currentPage = 1;
 		$scope.trackCheck = function(){
 			
 			console.log("Searching for "+vm.searchTitle);
