@@ -15,7 +15,7 @@
 			var refTrack = new Firebase("https://musicrack.firebaseio.com/tracks/"+id);
 			
 			try{
-				var newGenres = vm.genresNew;
+				var newGenres = vm.genresNew.split(",");
 				refTrack.update({artist: vm.artistNew,genres: newGenres,rating: vm.ratingNew,title: vm.titleNew});
 				$state.go('tracks');$state.go('tracks');
 				console.info("Track "+vm.titleNew+" Updated");

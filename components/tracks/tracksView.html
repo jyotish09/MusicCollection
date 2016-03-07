@@ -1,5 +1,8 @@
 <ui-view>
 <h3>Tracks List</h3>
+<a class = "btn btn-info pull-right" ng-click="goBack()" ng-if="tracks.searchTracksBoolean">
+<span class="glyphicon glyphicon-backward"></span>&nbsp; Back to Tracks </a>
+<br>
 <br>
 <div>
     <div class="input-group">
@@ -52,6 +55,7 @@
 <!--         <td>{{track.title}}&nbsp; : &nbsp;{{track.genres}}</td> -->
         <td>
 		{{track.title}} - {{track.artist}}
+		<a  ui-sref="tracks.updateTrack({trackTitle : track.title})"><span class = "glyphicon glyphicon-pencil"></span></a>
 		</td>
         <td>{{track.genres}}</td>
         <td >

@@ -45,6 +45,11 @@
 			
 			return r;
 		}; 
+		
+		$scope.goBack = function(){
+			vm.allTracks = true;	
+			vm.searchTracksBoolean = false;
+		};
 	}
 	
 	

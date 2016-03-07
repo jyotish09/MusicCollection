@@ -1,7 +1,7 @@
 (function(){
 	'use strict';
 	
-	var musicPlayer = angular.module('musicPlayer',['ui.bootstrap','ui.router','ngResource','firebase']);
+	var musicPlayer = angular.module('musicPlayer',['ui.bootstrap','ui.router','firebase']);
 	
 	musicPlayer.config(function ($stateProvider, $urlRouterProvider) {
 		
