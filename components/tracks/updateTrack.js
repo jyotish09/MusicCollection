@@ -21,7 +21,9 @@
 				console.info("Track "+vm.titleNew+" Updated");
 			}
 			catch(e){
-				console.warn(e);
+				refTrack.update({artist: vm.artistNew,rating: vm.ratingNew,title: vm.titleNew});
+				$state.go('tracks');$state.go('tracks');
+				console.info("Track "+vm.titleNew+" Updated");
 			}
 		}; 
 		
